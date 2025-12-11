@@ -21,7 +21,7 @@
 
   <body class="bg-white">
     <!-- Section 1: Header -->
-    <header class="bg-[#6D3FF2] text-white">
+    <header class="bg-[#8C52FF] text-white">
       <div class="max-w-6xl mx-auto px-4">
         <!-- Mobile: column, center; Desktop: row, space-between -->
         <div class="flex flex-col items-center gap-3 py-4 sm:py-6 md:flex-row md:justify-between md:gap-0">
@@ -36,7 +36,7 @@
             <img
               src="assets/img/ClubHouse.png"
               alt="ClubHouse"
-              class="h-2 sm:h-3 md:h-4 -mt-1 object-contain"
+              class="pl-4 h-2 sm:h-3 md:h-4 -mt-1 object-contain"
             />
           </div>
 
@@ -51,7 +51,7 @@
               href="#"
               class="inline-flex items-center rounded-lg bg-white px-4 py-2 text-black hover:bg-white/20 transition"
             >
-             <img src="assets/img/Heart.jpg" class="h-4 w-4 mr-2 ">Donate
+             <img src="assets/img/Heart.svg" class="h-4 w-4 mr-2 ">Donate
             </a>
           </nav>
 
@@ -59,7 +59,14 @@
       </div>
     </header>
     <!-- HERO SECTION -->
-<section class="bg-[#6D3FF2] text-white">
+<section
+  class="text-white"
+  style="
+    background:
+      linear-gradient(#8C52FF, rgba(120, 55, 250, 0.9)),
+      url('assets/img/hero-background.jpg') center/cover no-repeat;
+  "
+>
   <div class="max-w-6xl mx-auto px-4">
     <!-- 2-column layout on large screens, stacked on mobile -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start pt-16 pb-24">
@@ -73,14 +80,14 @@
 
         <!-- main heading -->
         <h1
-          class="mt-6 text-[32px] sm:text-[40px] lg:text-[56px] font-semibold leading-[1.2] text-[#F6EBF9]"
+          class="mt-6 text-[28px] sm:text-[30px] lg:text-[40px] font-semibold leading-[1.2] text-[#F6EBF9]"
         >
           Foundations First.<br />
 
           <span class="inline-flex items-center gap-3 mt-2">
             <!-- Futures pill -->
             <span
-              class="inline-block rounded-[18px] bg-[#FF7A59] px-10 py-3 -rotate-2 shadow-xl"
+              class="inline-block rounded-[10px] bg-[#FF7A59] px-3 -rotate-2 shadow-xl"
             >
               Futures
             </span>
@@ -136,14 +143,65 @@
       </div>
 
       <!-- RIGHT: hero image with ring (your PNG) -->
-      <div class="flex justify-center lg:justify-end mt-10 lg:mt-0">
+      <div class="flex justify-center lg:justify-end mt-10      lg:mt-0">
         <div
           class="h-64 w-64 sm:h-80 sm:w-80 bg-center bg-contain bg-no-repeat"
-          style="background-image: url('assets/Hero image image.png');"
+          style="background-image: url('assets/img/hero-image.png');"
         ></div>
+      </div>
+    </div>
+
+        <!-- Feature pills row -->
+        <!-- Feature pills row -->
+    <div class="mt-10 flex flex-wrap gap-4 justify-center lg:justify-start">
+
+      <!-- Inclusive -->
+      <div class="inline-flex items-center rounded-[5px] border border-[#C9C9C9] bg-[#00E7D3]/10 px-3 py-2">
+        <img
+          src="assets/img/inclusive-heart.svg"
+          alt="Inclusive"
+          class="h-4 w-4 mr-2"
+        />
+        <span class="font-semibold text-[#00E7D3] mr-2 text-xs sm:text-sm">
+          Inclusive
+        </span>
+        <span class="text-[11px] sm:text-xs text-white/80">
+          Every child deserves a chance to code
+        </span>
+      </div>
+
+      <!-- Empowering -->
+      <div class="inline-flex items-center rounded-[5px] border border-[#C9C9C9] bg-[#9F7AEA]/10 px-3 py-2">
+        <img
+          src="assets/img/lightening-exploring.png"
+          alt="Empowering"
+          class="h-4 w-4 mr-2"
+        />
+        <span class="font-semibold text-[#E3D7FF] mr-2 text-xs sm:text-sm">
+          Empowering
+        </span>
+        <span class="text-[11px] sm:text-xs text-white/80">
+          Building confidence through coding
+        </span>
+      </div>
+
+      <!-- Innovative -->
+      <div class="inline-flex items-center rounded-[5px] border border-[#C9C9C9] bg-[#A273FFD1]/10 px-3 py-2">
+        <img
+          src="assets/img/innovative.jpg"
+          alt="Innovative"
+          class="h-4 w-4 mr-2 rounded-full"
+        />
+        <span class="font-semibold text-[#FFD447] mr-2 text-xs sm:text-sm">
+          Innovative
+        </span>
+        <span class="text-[11px] sm:text-xs text-white/80">
+          Building confidence through coding
+        </span>
       </div>
 
     </div>
+
   </div>
 </section>
 

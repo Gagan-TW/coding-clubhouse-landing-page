@@ -197,7 +197,13 @@
 </section>
 
 <!-- WHO WE ARE SECTION -->
-<section class="bg-white py-16">
+<section class="relative z-10 bg-white py-16">
+  <img
+  src="assets/img/violet-dot.png"
+  alt=""
+  class="hidden md:block absolute h-14 w-14 opacity-80 pointer-events-none select-none top-[120px] left-[150px]"
+/>
+
   <div class="max-w-6xl mx-auto px-4">
     <!-- Heading -->
     <div class="text-center">
@@ -354,120 +360,224 @@
 </section>
 
 
-<!-- WHAT WE DO SECTION -->
-<section class="bg-white py-16">
+<!-- WHAT WE DO / FEATURED PROGRAMS -->
+<section class="bg-white py-20">
   <div class="max-w-6xl mx-auto px-4">
-    <!-- Heading -->
-    <div class="text-center">
-      <!-- small icon row (optional) -->
-      <div class="inline-flex items-center justify-center gap-3 text-[#1F4DB6] text-xs">
-        <span>💡</span>
-        <span>&lt;/&gt;</span>
-        <span>✨</span>
-      </div>
-
-      <h2 class="mt-3 text-3xl font-semibold text-[#1F4DB6]">
+    <!-- Section heading -->
+    <div class="text-center mb-10">
+      <!-- Main heading: What We Do -->
+      <h2 class="text-[44px] leading-[1.2] font-semibold text-[#AD31D9]">
         What We Do
       </h2>
 
-      <p class="mt-3 max-w-2xl mx-auto text-sm sm:text-base text-slate-600">
-        We design inclusive, beginner-friendly programs that introduce children and communities
-        to the world of code — no prior experience needed.
+      <!-- Subheading paragraph -->
+      <p
+        class="mt-4 max-w-3xl mx-auto text-[18px] leading-[1.6] font-medium text-slate-700"
+      >
+        We design inclusive, beginner-friendly programs that introduce children
+        and communities to the world of tech — no prior experience needed.
+      </p>
+
+      <!-- Featured Programs label -->
+      <p class="mt-8 text-2xl font-semibold text-slate-900">
+        Featured Programs
       </p>
     </div>
 
-    <!-- Featured program cards -->
-    <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- Card 1: Dream Beyond Limits -->
-      <article class="flex flex-col rounded-3xl bg-white shadow-lg ring-1 ring-slate-100 overflow-hidden">
-        <div class="p-6 pb-4">
-          <!-- icon badge -->
-          <div class="inline-flex items-center justify-center rounded-full bg-amber-50 text-amber-500 h-9 w-9">
-            🕊
+    <!-- Cards grid: 1 col mobile, 3 cols on large -->
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+      <!-- CARD 1: Dream Beyond Limits -->
+      <article
+        class="flex flex-col rounded-xl border-[2px] border-[#E5E5E5] bg-[#E8FCFA]
+               pt-4 pb-6 px-8 min-h-[380px] md: h-[552px]"
+      >
+        <!-- Top row: rocket + dots -->
+        <div class="flex items-center justify-start">
+          <!-- your small rocket icon image -->
+          <img
+            src="assets/img/dream-frame.png"
+            alt="Dream Beyond Limits"
+            class="h-8 w-8 object-contain"
+          />
+
+          <!-- three window dots -->
+          <div class="flex items-center gap-2">
+            <span class="h-2 w-2 rounded-full bg-[#FF6B6B]"></span>
+            <span class="h-2 w-2 rounded-full bg-[#FFD166]"></span>
+            <span class="h-2 w-2 rounded-full bg-[#06D6A0]"></span>
           </div>
-
-          <h3 class="mt-4 text-lg font-semibold text-slate-900">
-            Dream Beyond Limits
-          </h3>
-
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">
-            A hands-on outreach program that selects underrepresented schools and
-            communities, bringing pop-up coding labs, project-based workshops, and
-            creative storytelling to spark curiosity.
-          </p>
         </div>
 
-        <!-- code-style tracks box -->
-        <div class="mx-6 mb-6 rounded-2xl bg-slate-900 px-4 py-3 text-[11px] leading-5 font-mono text-slate-100">
-          <span class="text-sky-300">tracks</span> = [
-          <span class="text-emerald-300">'Story games'</span>,
-          <span class="text-emerald-300">'Digital art'</span>,
-          <span class="text-emerald-300">'Robotics basics'</span>
-          ];
+        <!-- Title -->
+        <h3 class="mt-6 text-lg font-semibold text-slate-900">
+          Dream Beyond Limits
+        </h3>
+
+        <!-- Description -->
+        <p class="mt-3 text-sm leading-relaxed text-slate-700">
+          A hands-on outreach program that selects three promising students
+          and one teacher from each participating school. We inspire them
+          through coding sessions and leave behind our Code Equity curriculum
+          so the whole school can keep learning.
+        </p>
+
+        <!-- Code block sits at the bottom because of flex + mt-auto -->
+        <div class="mt-3 pt-4 ">
+          <div class="rounded-2xl bg-[#161B22] px-5 py-4">
+            <p class="mb-2 text-xs text-slate-300 flex items-center gap-2">
+              <span class="flex gap-1">
+                <span class="h-2 w-2 rounded-full bg-[#FF6B6B]"></span>
+                <span class="h-2 w-2 rounded-full bg-[#FFD166]"></span>
+                <span class="h-2 w-2 rounded-full bg-[#06D6A0]"></span>
+              </span>
+              <span class="text-[#AEAEAE]">code.js</span>
+            </p>
+            <pre
+  class="text-[11px] leading-[1.5] font-mono text-[#2DE361]
+         whitespace-pre-wrap break-words"
+>
+function dreamBig() {
+  const dreams = ['coding', 'creating', 'inspiring'];
+  dreams.forEach(dream => {
+    console.log(`I can ${dream}!`);
+  });
+};
+</pre>
+
+          </div>
         </div>
       </article>
 
-      <!-- Card 2: Teacher Training & Youth Empowerment -->
-      <article class="flex flex-col rounded-3xl bg-white shadow-lg ring-1 ring-slate-100 overflow-hidden">
-        <div class="p-6 pb-4">
-          <div class="inline-flex items-center justify-center rounded-full bg-teal-50 text-teal-500 h-9 w-9">
-            👩‍🏫
+        <!-- CARD 2: Dream Beyond Limits -->
+      <article
+        class="flex flex-col rounded-xl border-[2px] border-[#E5E5E5] bg-[#FCF8E8]
+                pt-4 pb-6 px-8 min-h-[380px] md: h-[552px]"
+      >
+        <!-- Top row: rocket + dots -->
+        <div class="flex items-center justify-start">
+          <!-- your small rocket icon image -->
+          <img
+            src="assets/img/teacher-frame.png"
+            alt="Dream Beyond Limits"
+            class="h-8 w-8 object-contain"
+          />
+
+          <!-- three window dots -->
+          <div class="flex items-center gap-2">
+            <span class="h-2 w-2 rounded-full bg-[#FF6B6B]"></span>
+            <span class="h-2 w-2 rounded-full bg-[#FFD166]"></span>
+            <span class="h-2 w-2 rounded-full bg-[#06D6A0]"></span>
           </div>
-
-          <h3 class="mt-4 text-lg font-semibold text-slate-900">
-            Teacher Training &amp; Youth Empowerment
-          </h3>
-
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">
-            We equip teachers and youth mentors with plug-and-play lesson plans,
-            facilitation guides, and ongoing support so they can confidently run
-            coding clubs in their own schools and communities.
-          </p>
         </div>
 
-        <div class="mx-6 mb-6 rounded-2xl bg-slate-900 px-4 py-3 text-[11px] leading-5 font-mono text-slate-100">
-          <span class="text-sky-300">modules</span> = [
-          <span class="text-emerald-300">'Intro to coding clubs'</span>,
-          <span class="text-emerald-300">'Facilitation basics'</span>,
-          <span class="text-emerald-300">'Inclusive classrooms'</span>
-          ];
+        <!-- Title -->
+        <h3 class="mt-6 text-lg font-semibold text-slate-900">
+          Dream Beyond Limits
+        </h3>
+
+        <!-- Description -->
+        <p class="mt-3 text-sm leading-relaxed text-slate-700">
+          A hands-on outreach program that selects three promising students
+          and one teacher from each participating school. We inspire them
+          through coding sessions and leave behind our Code Equity curriculum
+          so the whole school can keep learning.
+        </p>
+
+        <!-- Code block sits at the bottom because of flex + mt-auto -->
+        <div class="mt-3 pt-4">
+          <div class="rounded-2xl bg-[#161B22] px-5 py-4">
+            <p class="mb-2 text-xs text-slate-300 flex items-center gap-2">
+              <span class="flex gap-1">
+                <span class="h-2 w-2 rounded-full bg-[#FF6B6B]"></span>
+                <span class="h-2 w-2 rounded-full bg-[#FFD166]"></span>
+                <span class="h-2 w-2 rounded-full bg-[#06D6A0]"></span>
+              </span>
+              <span class="text-[#AEAEAE]">code.js</span>
+            </p>
+            <pre
+  class="text-[11px] leading-[1.5] font-mono text-[#2DE361]
+         whitespace-pre-wrap break-words"
+>
+function dreamBig() {
+  const dreams = ['coding', 'creating', 'inspiring'];
+  dreams.forEach(dream => {
+    console.log(`I can ${dream}!`);
+  });
+};
+</pre>
+
+          </div>
         </div>
       </article>
 
-      <!-- Card 3: Virtual Summer Classes -->
-      <article class="flex flex-col rounded-3xl bg-white shadow-lg ring-1 ring-slate-100 overflow-hidden">
-        <div class="p-6 pb-4">
-          <div class="inline-flex items-center justify-center rounded-full bg-rose-50 text-rose-500 h-9 w-9">
-            💻
+        <!-- CARD 3: Dream Beyond Limits -->
+      <article
+          class="flex flex-col rounded-xl border-[2px] border-[#E5E5E5] bg-[#E8FCFA]
+                pt-4 pb-6 px-8 min-h-[380px] md:min-h-[602px]"
+      >
+        <!-- Top row: rocket + dots -->
+        <div class="flex items-center justify-start">
+          <!-- your small rocket icon image -->
+          <img
+            src="assets/img/dream-frame.png"
+            alt="Dream Beyond Limits"
+            class="h-8 w-8 object-contain"
+          />
+
+          <!-- three window dots -->
+          <div class="flex items-center gap-2">
+            <span class="h-2 w-2 rounded-full bg-[#FF6B6B]"></span>
+            <span class="h-2 w-2 rounded-full bg-[#FFD166]"></span>
+            <span class="h-2 w-2 rounded-full bg-[#06D6A0]"></span>
           </div>
-
-          <h3 class="mt-4 text-lg font-semibold text-slate-900">
-            Virtual Summer Classes
-          </h3>
-
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">
-            Online summer programs that bring tech mentors, small-group projects,
-            and collaborative challenges to kids anywhere in the world, all from
-            the comfort of home.
-          </p>
         </div>
 
-        <div class="mx-6 mb-6 rounded-2xl bg-slate-900 px-4 py-3 text-[11px] leading-5 font-mono text-slate-100">
-          <span class="text-sky-300">tracks</span> = [
-          <span class="text-emerald-300">'Web designer'</span>,
-          <span class="text-emerald-300">'Game maker'</span>,
-          <span class="text-emerald-300">'Story coder'</span>
-          ];
+        <!-- Title -->
+        <h3 class="mt-6 text-lg font-semibold text-slate-900">
+          Dream Beyond Limits
+        </h3>
+
+        <!-- Description -->
+        <p class="mt-3 text-sm leading-relaxed text-slate-700">
+          A hands-on outreach program that selects three promising students
+          and one teacher from each participating school. We inspire them
+          through coding sessions and leave behind our Code Equity curriculum
+          so the whole school can keep learning.
+        </p>
+
+        <!-- Code block sits at the bottom because of flex + mt-auto -->
+        <div class="mt-3 pt-4">
+          <div class="rounded-2xl bg-[#161B22] px-5 py-4">
+            <p class="mb-2 text-xs text-slate-300 flex items-center gap-2">
+              <span class="flex gap-1">
+                <span class="h-2 w-2 rounded-full bg-[#FF6B6B]"></span>
+                <span class="h-2 w-2 rounded-full bg-[#FFD166]"></span>
+                <span class="h-2 w-2 rounded-full bg-[#06D6A0]"></span>
+              </span>
+              <span class="text-[#AEAEAE]">code.js</span>
+            </p>
+            <pre
+  class="text-[11px] leading-[1.5] font-mono text-[#2DE361]
+         whitespace-pre-wrap break-words"
+>
+function dreamBig() {
+  const dreams = ['coding', 'creating', 'inspiring'];
+  dreams.forEach(dream => {
+    console.log(`I can ${dream}!`);
+  });
+};
+</pre>
+
+          </div>
         </div>
       </article>
     </div>
-
-    <!-- small caption under cards -->
-    <p class="mt-8 text-center text-xs sm:text-sm text-slate-500">
-      Building the future, one line of code at a time.
-    </p>
   </div>
 </section>
+
+</section>
+
 
 
 

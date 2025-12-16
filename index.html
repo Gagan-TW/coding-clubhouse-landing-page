@@ -21,7 +21,7 @@
 
   <body class="bg-white">
     <!-- Section 1: Header -->
-    <header class="sticky top-0 z-50 bg-[#8C52FF] text-white">
+    <header id="header" class="sticky top-0 z-50 bg-[#8C52FF] text-white">
 
       <div class="max-w-6xl mx-auto px-4">
         <!-- Mobile: column, center; Desktop: row, space-between -->
@@ -43,13 +43,14 @@
 
           <!-- Nav: always visible, centered on mobile -->
           <nav class="flex flex-wrap justify-center items-center gap-4 text-sm font-medium text-white/90 md:gap-8">
-            <a href="#" class="hover:text-white">About Us</a>
-            <a href="#" class="hover:text-white">Programs</a>
-            <a href="#" class="hover:text-white">Resources</a>
-            <a href="#" class="hover:text-white">Get Involved</a>
+            <a href="#about-us" class="hover:text-white">About Us</a>
+            <a href="#programs" class="hover:text-white">Programs</a>
+            <a href="#resources" class="hover:text-white">Resources</a>
+            <a href="#get-involved" class="hover:text-white">Get Involved</a>
 
-            <a
+            <a 
               href="#"
+              id="donate"
               class="inline-flex items-center rounded-lg bg-white px-4 py-2 text-black hover:bg-white/20 transition"
             >
              <img src="assets/img/Heart.svg" class="h-4 w-4 mr-2 ">Donate
@@ -61,12 +62,12 @@
     </header>
     <!-- HERO SECTION -->
 <section
-  class="text-white min-h-[75vh]"
-  style="
-    background:
-      linear-gradient(#8C52FF, rgba(120, 55, 250, 0.9)),
-      url('assets/img/hero-background.jpg') center/cover no-repeat;
-  "
+  id="hero"
+  class="text-white min-h-[75vh]
+         bg-[linear-gradient(#8C52FF,rgba(120,55,250,0.9)),url('assets/img/hero-background.jpg')]
+         bg-center bg-cover bg-no-repeat scroll-mt-26"
+>
+
 >
   <div class="max-w-6xl mx-auto px-4">
     <!-- 2-column layout on large screens, stacked on mobile -->
@@ -109,7 +110,7 @@
 </p>
 
         <!-- buttons -->
-        <div class="mt-8 flex flex-wrap justify-start gap-4">
+        <div  class="mt-8 flex flex-wrap justify-start gap-4">
           <!-- yellow button (use your rocket.svg here) -->
           <a
             href="#"
@@ -198,7 +199,7 @@
 </section>
 
 <!-- WHO WE ARE SECTION -->
-<section class="relative z-10 bg-white py-16">
+<section id="about-us" class="relative z-10 bg-white py-16 scroll-mt-26">
   <img
   src="assets/img/violet-dot.png"
   alt=""
@@ -362,8 +363,8 @@
 
 
 <!-- WHAT WE DO / FEATURED PROGRAMS -->
-<section
-  class="relative py-20 bg-[linear-gradient(180deg,_#EAF0FA_0%,_#FFFFFF_52.4%,_#F4E8FF_100%)]"
+<section id="programs"
+  class="relative py-20 bg-[linear-gradient(180deg,_#EAF0FA_0%,_#FFFFFF_52.4%,_#F4E8FF_100%)] scroll-mt-28"
 >
 
 
@@ -587,7 +588,7 @@ tracks.map(track => 'Learn ' + track + '!');</pre>
 </section>
 
 <!-- IN ACTION SECTION -->
-<section class="relative bg-[#EAF0FA] py-20">
+<section id="resources" class="relative bg-[#EAF0FA] py-20 scroll-mt-32">
   <!-- floating code text on background -->
   <p class="hidden md:block absolute right-10 top-6 text-[11px] font-mono text-[#AD31D9]/70">
     return 'happy';
@@ -702,7 +703,7 @@ tracks.map(track => 'Learn ' + track + '!');</pre>
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-white border-t border-slate-200">
+<footer id="get-involved" class="bg-white border-t border-slate-200 scroll-mt-35">
   <div class="max-w-6xl mx-auto px-4 py-10 space-y-8">
 
     <!-- Row 1: logo + nav + socials -->
@@ -715,7 +716,7 @@ tracks.map(track => 'Learn ' + track + '!');</pre>
           class="mb-1 h-6 object-contain"
         />
         <img
-          src="assets/img/ClubHouse.png"
+          src="assets/img/clubhouse-footer.png"
           alt="ClubHouse"
           class="pl-4 -mt-1 h-3 object-contain"
         />
@@ -723,10 +724,10 @@ tracks.map(track => 'Learn ' + track + '!');</pre>
 
       <!-- nav links -->
       <nav class="flex flex-wrap justify-center gap-6 text-sm font-medium text-slate-800">
-        <a href="#" class="hover:text-[#8C52FF]">About Us</a>
-        <a href="#" class="hover:text-[#8C52FF]">Programs</a>
-        <a href="#" class="hover:text-[#8C52FF]">Volunteer</a>
-        <a href="#" class="hover:text-[#8C52FF]">Donate</a>
+        <a href="#about-us" class="hover:text-[#8C52FF]">About Us</a>
+        <a href="#programs" class="hover:text-[#8C52FF]">Programs</a>
+        <a href="#hero" class="hover:text-[#8C52FF]">Volunteer</a>
+        <a href="#header" class="hover:text-[#8C52FF]">Donate</a>
       </nav>
 
       <!-- social icons -->

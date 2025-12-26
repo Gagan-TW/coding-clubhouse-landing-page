@@ -16,549 +16,188 @@
     </style>
   </head>
 
-  <body class="bg-slate-50 text-slate-900" id="top">
-    <!-- ================= HEADER (NO JS) ================= -->
-    <header
-      class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200"
+ <body class="bg-white">
+    <header id="header" class="sticky top-0 z-50 bg-[#8C52FF] text-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- Mobile: column, center; Desktop: row, space-between -->
+    <div
+      class="flex flex-col md:flex-row justify-between gap-2 py-4 md:py-4 px-10 md:gap-0"
     >
-      <div class="max-w-6xl mx-auto px-4">
-        <!-- We put the hidden checkbox at the top so everything
-             below can react using peer-checked:* utilities -->
-        <input
-          id="nav-toggle"
-          type="checkbox"
-          class="peer sr-only"
-          aria-hidden="true"
+      <!-- Brand -->
+      <div class="flex flex-col leading-none items-center md:items-start">
+        <img
+          src="assets/img/TheCoding.png"
+          alt="TheCoding"
+          class="mb-1 h-5 sm:h-6 md:h-7 object-contain drop-shadow"
         />
-
-        <div class="flex h-16 items-center justify-between">
-          <!-- Logo / name -->
-          <a
-            href="index.html"
-            class="text-xl font-semibold tracking-tight text-violet-600"
-          >
-            Coding Clubhouse
-          </a>
-
-          <!-- Desktop nav -->
-          <nav
-            class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-700"
-          >
-            <a href="index.html" class="hover:text-violet-600">Home</a>
-            <a
-              href="#who-we-are"
-              class="hover:text-violet-600 text-violet-600"
-              >About</a
-            >
-            <a href="#mission" class="hover:text-violet-600">Mission</a>
-            <a href="#team" class="hover:text-violet-600">Team</a>
-            <a href="#contact" class="hover:text-violet-600">Contact</a>
-
-            <a
-              href="#contact"
-              class="rounded-full bg-violet-600 px-4 py-2 text-white text-sm font-semibold shadow-sm hover:bg-violet-700 transition"
-            >
-              Get Involved
-            </a>
-          </nav>
-
-          <!-- Mobile: hamburger button (works with checkbox) -->
-          <label
-            for="nav-toggle"
-            class="md:hidden inline-flex items-center justify-center rounded-full p-2 text-slate-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-violet-500"
-            aria-label="Toggle main menu"
-          >
-            <!-- We simply show ☰; you could replace with an icon -->
-            ☰
-          </label>
-        </div>
-
-        <!-- Mobile overlay + sheet controlled only by the checkbox -->
-        <div class="md:hidden">
-          <!-- Dim background -->
-          <div
-            class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition
-                   peer-checked:opacity-100 peer-checked:pointer-events-auto"
-          ></div>
-
-          <!-- Slide-down panel -->
-          <nav
-            class="peer-checked:max-h-80 max-h-0 overflow-hidden transition-[max-height]
-                   duration-300 bg-white border-t border-slate-200"
-          >
-            <div class="px-4 py-4 space-y-4 text-sm font-medium text-slate-800">
-              <a href="index.html" class="block">Home</a>
-              <a href="#who-we-are" class="block">About</a>
-              <a href="#mission" class="block">Mission</a>
-              <a href="#team" class="block">Team</a>
-              <a href="#contact" class="block">Contact</a>
-
-              <a
-                href="#contact"
-                class="mt-2 inline-flex w-full items-center justify-center rounded-full
-                       bg-violet-600 px-4 py-2 text-sm font-semibold text-white
-                       hover:bg-violet-700 transition"
-              >
-                Get Involved
-              </a>
-            </div>
-          </nav>
-        </div>
+        <img
+          src="assets/img/ClubHouse.png"
+          alt="ClubHouse"
+          class="pl-4 h-2 sm:h-3 md:h-4 -mt-1 object-contain"
+        />
       </div>
-    </header>
 
-    <!-- ================= HERO ================= -->
+      <!-- Nav: always visible, centered on mobile -->
+      <nav
+        class="flex flex-wrap justify-center items-center gap-2 text-sm font-medium text-white/90 md:gap-8"
+      >
+        <a href="#about-us" class="text-[#FFE48D] text-[16px] hover:text-white">About Us</a>
+
+        <!-- Programs dropdown (click to open, no JS) -->
+        <details class="relative group">
+          <!-- The clickable row -->
+          <summary
+            class="flex items-center gap-1 cursor-pointer hover:text-white list-none"
+          >
+            <span class="text-[16px]">Programs</span>
+            <!-- your arrow icon -->
+            <img
+              src="assets/img/Chevron down.png"
+              alt=""
+              class="h-4 w-4 mt-[2px] transition-transform duration-200 group-open:rotate-180"
+            />
+          </summary>
+
+          <!-- The dropdown panel -->
+          <div
+            class="absolute left-0 mt-3 w-72 rounded-2xl bg-white text-slate-900 shadow-[0_18px_40px_rgba(15,23,42,0.30)] border border-slate-100 py-2 z-20"
+          >
+            <a
+              href="#"
+              class="block px-5 py-3 text-sm hover:bg-slate-50"
+            >
+              Dream Beyond Limits
+            </a>
+            <a
+              href="#"
+              class="block px-5 py-3 text-sm hover:bg-slate-50"
+            >
+              Teacher Training &amp; Youth Empowerment
+            </a>
+            <a
+              href="#"
+              class="block px-5 py-3 text-sm hover:bg-slate-50"
+            >
+              Virtual Summer Class
+            </a>
+            <a
+              href="#"
+              class="block px-5 py-3 text-sm hover:bg-slate-50"
+            >
+              Code Equity Curriculum
+            </a>
+          </div>
+        </details>
+
+        <a href="#resources" class=" text-[16px] hover:text-white">Resources</a>
+        <a href="#get-involved" class="text-[16px] hover:text-white">Get Involved</a>
+
+        <div class="flex justify-between gap-2">
+          <a
+          href="#"
+          id="donate"
+          class="inline-flex items-center rounded-lg bg-[#FFD447] px-4 py-2 text-black hover:bg-white/20 transition"
+        >
+          <img src="assets/img/Heart.svg" class="h-4 w-4 mr-2" alt="" />
+          Donate
+        </a>
+
+        <a
+          href="#"
+          id="contact"
+          class="inline-flex items-center rounded-lg bg-white px-4 py-2 text-black hover:bg-white/20 transition"
+        >
+          Contact Us
+        </a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO SECTION ================= -->
 <section
-  class="relative overflow-hidden text-white"
+  class="relative min-h-[70vh] md:min-h-[90vh] text-white overflow-hidden"
 >
-  <!-- Background image + dark overlay -->
+  <!-- Background image + gradient -->
   <div class="absolute inset-0">
     <img
       src="assets/img/about-us-hero-background.jpg"
-      alt="Kids learning to code at Coding Clubhouse"
+      alt="Students learning to code at The Coding Clubhouse"
       class="h-full w-full object-cover"
     />
+
+    <!-- Dark + blue gradient overlay -->
     <div
-      class="absolute inset-0 bg-gradient-to-b from-violet-900/70 via-violet-800/70 to-slate-950/80"
+      class="absolute inset-0
+             bg-gradient-to-b
+             from-black/40
+             via-[#184EB4]/60
+             to-[#184EB4]/25"
     ></div>
   </div>
 
-  <!-- Foreground content -->
+  <!-- MAIN CONTENT (centered text) -->
   <div
-    class="relative max-w-6xl mx-auto px-4 pt-16 pb-20 sm:pt-20 sm:pb-24 text-center"
+    class="relative max-w-4xl mx-auto px-4
+           flex flex-col items-center justify-center
+           text-center
+           pt-24 pb-24 md:pt-32 md:pb-32"
   >
-    <p class="text-xs sm:text-sm tracking-[0.25em] uppercase mb-3 text-violet-100">
-      About Us
-    </p>
-
     <h1
-      class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight"
+      class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl
+             font-extrabold tracking-tight"
     >
-      We’re <span class="text-amber-300">Coding</span> Change
+      We’re Coding Clubhouse.
     </h1>
 
     <p
-      class="mt-4 max-w-2xl mx-auto text-sm sm:text-base text-violet-100 leading-relaxed"
+      class="mt-4 text-base sm:text-lg lg:text-xl leading-relaxed
+             max-w-2xl"
     >
-      Coding Clubhouse is a community where children learn coding through
-      real projects, mentors, and playful experimentation.
+      Making computer science
+      <span class="text-[#FACC15] font-semibold">accessible</span>,
+      <span class="text-[#22C55E] font-semibold">inclusive</span>,
+      and
+      <span class="text-[#FB7185] font-semibold">joyful</span>
+      for <span class="font-semibold">every child</span>.
     </p>
+  </div>
 
-    <div
-      class="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center"
-    >
-      <a
-        href="#who-we-are"
-        class="inline-flex items-center justify-center rounded-full bg-amber-300 px-6 py-3 text-sm font-semibold text-violet-900 shadow-md hover:bg-amber-200 transition"
-      >
-        Learn who we are
-      </a>
+  <!-- SMALL TOP-LEFT LABEL -->
+  <div
+    class="pointer-events-none
+           absolute top-6 left-4 sm:top-10 sm:left-10
+           text-[11px] sm:text-xs font-medium
+           text-[#5BF5E8]"
+  >
+    joy = coding + kid;
+  </div>
 
-      <a
-        href="#mission"
-        class="inline-flex items-center justify-center rounded-full border border-violet-200/70 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
-      >
-        Our mission &amp; vision
-      </a>
-    </div>
+  <!-- PURPLE PILL ON RIGHT MIDDLE -->
+  <div
+    class="pointer-events-none
+           absolute bottom-24 right-4
+           sm:bottom-28 sm:right-16
+           rounded-full bg-[#A855F7]
+           px-4 sm:px-6 py-1.5
+           text-[11px] sm:text-xs font-semibold"
+  >
+    while (learning) smile();
+  </div>
+
+  <!-- SMALL TEXT NEAR BOTTOM CENTER -->
+  <div
+    class="pointer-events-none
+           absolute bottom-10 left-1/2 -translate-x-1/2
+           text-[10px] sm:text-xs tracking-wide text-slate-100/80"
+  >
+    function learn() { }
   </div>
 </section>
 
 
-    <!-- ================= WHO WE ARE ================= -->
-    <section
-      id="who-we-are"
-      class="bg-slate-50 py-14 sm:py-16 lg:py-20"
-    >
-      <div class="max-w-6xl mx-auto px-4">
-        <!-- Heading -->
-        <div class="text-center mb-8">
-          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">
-            Who We Are
-          </h2>
-          <div
-            class="mt-2 h-1 w-16 mx-auto rounded-full bg-violet-600"
-          ></div>
-          <p
-            class="mt-4 max-w-2xl mx-auto text-sm sm:text-base text-slate-600 leading-relaxed"
-          >
-            We are a volunteer-driven coding community that helps kids discover
-            their voice through technology, projects, and teamwork.
-          </p>
-        </div>
 
-        <!-- Main card -->
-        <div
-          class="rounded-3xl bg-white shadow-lg border border-slate-100 px-6 py-8 sm:px-8 sm:py-10 grid gap-8 lg:grid-cols-2"
-        >
-          <!-- Left: narrative -->
-          <div class="space-y-4 text-sm sm:text-base leading-relaxed">
-            <p>
-              Coding Clubhouse began as a small weekend club for curious kids
-              who wanted to do more than just “use” technology. Today, it is a
-              structured learning space where 8–16 year olds experiment with
-              code, design interfaces, build games, and present their ideas.
-            </p>
-            <p>
-              Sessions are led by mentors from industry and academia who break
-              concepts down into simple language, hands-on challenges, and
-              collaborative projects. Each cohort ends with a showcase where
-              kids demo what they’ve built to parents, teachers, and peers.
-            </p>
-            <p>
-              Our goal is not just to teach syntax, but to build confidence,
-              problem-solving skills, and a growth mindset that stays with them
-              beyond the classroom.
-            </p>
-          </div>
-
-          <!-- Right: “code-style” panel -->
-          <div
-            class="rounded-2xl bg-slate-900 text-slate-50 p-5 shadow-inner flex flex-col gap-4"
-          >
-            <div class="flex gap-1 text-[10px] uppercase tracking-wide">
-              <span
-                class="px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-400/40"
-                >clubhouse.ts</span
-              >
-              <span
-                class="px-2 py-1 rounded-full bg-violet-500/10 text-violet-200 border border-violet-400/40"
-                >about()</span
-              >
-            </div>
-
-            <pre
-              class="text-xs sm:text-[13px] leading-relaxed font-mono text-slate-100 whitespace-pre-wrap"
-            >const codingClubhouse = {
-  location: "Weekend & after-school clubs",
-  ageGroup: "8–16 years",
-  pillars: ["Play", "Project-based learning", "Peer collaboration"],
-  focusAreas: ["Web basics", "Games", "Problem-solving"],
-};</pre>
-
-            <div class="grid grid-cols-2 gap-3 text-xs">
-              <div
-                class="rounded-xl bg-slate-800/70 border border-slate-700 px-3 py-2"
-              >
-                <p class="font-semibold text-amber-300">Learners</p>
-                <p class="mt-1 text-slate-200">
-                  Beginner-friendly, no prior coding experience required.
-                </p>
-              </div>
-              <div
-                class="rounded-xl bg-slate-800/70 border border-slate-700 px-3 py-2"
-              >
-                <p class="font-semibold text-emerald-300">Mentors</p>
-                <p class="mt-1 text-slate-200">
-                  Volunteers from tech, design, and education.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= MISSION & VISION ================= -->
-    <section
-      id="mission"
-      class="bg-gradient-to-r from-violet-50 via-fuchsia-50 to-amber-50 py-14 sm:py-16 lg:py-20"
-    >
-      <div class="max-w-6xl mx-auto px-4">
-        <div class="text-center mb-8">
-          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">
-            Our Mission &amp; Vision
-          </h2>
-          <div
-            class="mt-2 h-1 w-16 mx-auto rounded-full bg-violet-600"
-          ></div>
-          <p
-            class="mt-4 max-w-3xl mx-auto text-sm sm:text-base text-slate-700 leading-relaxed"
-          >
-            Every child deserves a safe space to experiment with technology. Our
-            programs are designed so that curiosity, collaboration, and
-            creativity come before exams and marks.
-          </p>
-        </div>
-
-        <div class="grid gap-6 lg:grid-cols-2">
-          <!-- Mission -->
-          <article
-            class="rounded-2xl bg-white shadow-md border border-violet-100 p-6 sm:p-7 flex flex-col gap-4"
-          >
-            <h3 class="text-base font-semibold text-slate-900 flex items-center">
-              <span
-                class="mr-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-violet-600 text-white text-xs"
-                >M</span
-              >
-              Our Mission
-            </h3>
-
-            <pre
-              class="mt-1 rounded-xl bg-slate-900 text-slate-50 p-4 text-[11px] sm:text-xs leading-relaxed font-mono whitespace-pre-wrap"
-            >function mission() {
-  return [
-    "Make coding accessible and fun for kids from all backgrounds.",
-    "Use real projects to connect technology with everyday life.",
-    "Create a supportive community of mentors, parents, and learners.",
-  ];
-}</pre>
-
-            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
-              In every session, kids build something they can show, explain, and
-              be proud of—whether it is a small game, website, or interactive
-              story.
-            </p>
-          </article>
-
-          <!-- Vision -->
-          <article
-            class="rounded-2xl bg-white shadow-md border border-amber-100 p-6 sm:p-7 flex flex-col gap-4"
-          >
-            <h3 class="text-base font-semibold text-slate-900 flex items-center">
-              <span
-                class="mr-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-amber-400 text-violet-900 text-xs"
-                >V</span
-              >
-              Our Vision
-            </h3>
-
-            <pre
-              class="mt-1 rounded-xl bg-slate-900 text-slate-50 p-4 text-[11px] sm:text-xs leading-relaxed font-mono whitespace-pre-wrap"
-            >const vision = {
-  2025: "Clubs in every major city in the region.",
-  2030: "Student-led projects solving local problems.",
-  culture: ["Kindness", "Inclusivity", "Curiosity", "Ownership"],
-};</pre>
-
-            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
-              We imagine a future where students don’t just consume apps but
-              design solutions for their schools, neighbourhoods, and cities.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= MEET THE TEAM ================= -->
-<section
-  id="team"
-  class="bg-slate-50 py-14 sm:py-16 lg:py-20"
->
-  <div class="max-w-6xl mx-auto px-4">
-    <!-- Heading -->
-    <div class="text-center mb-10">
-      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">
-        Meet The Team
-      </h2>
-      <div
-        class="mt-2 h-1 w-16 mx-auto rounded-full bg-violet-600"
-      ></div>
-      <p
-        class="mt-4 max-w-3xl mx-auto text-sm sm:text-base text-slate-600 leading-relaxed"
-      >
-        Coding Clubhouse runs on a small core team and a group of mentors who
-        bring real-world experience into every session.
-      </p>
-    </div>
-
-    <!-- Cards -->
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- Card 1 -->
-      <article
-        class="relative rounded-2xl bg-white border border-violet-100 shadow-sm px-6 pt-10 pb-6 flex flex-col items-center text-center"
-      >
-        <div
-          class="absolute -top-10 h-20 w-20 rounded-full border-4 border-white shadow-md overflow-hidden"
-        >
-          <img
-            src="assets/img/member-card-1.jpg"
-            alt="Gagandeep Kaur"
-            class="h-full w-full object-cover"
-          />
-        </div>
-
-        <h3 class="mt-2 text-sm font-semibold text-slate-900">
-          Gagandeep Kaur
-        </h3>
-        <p class="text-xs text-violet-600 font-medium">
-          Front-End Developer &amp; Docs Lead
-        </p>
-        <p class="mt-3 text-xs text-slate-600 leading-relaxed">
-          Designs and builds the website experience and maintains clear,
-          kid-friendly documentation for projects and programs.
-        </p>
-      </article>
-
-      <!-- Card 2 -->
-      <article
-        class="relative rounded-2xl bg-white border border-fuchsia-100 shadow-sm px-6 pt-10 pb-6 flex flex-col items-center text-center"
-      >
-        <div
-          class="absolute -top-10 h-20 w-20 rounded-full border-4 border-white shadow-md overflow-hidden"
-        >
-          <img
-            src="assets/img/member-card-2.jpg"
-            alt="Team member"
-            class="h-full w-full object-cover"
-          />
-        </div>
-
-        <h3 class="mt-2 text-sm font-semibold text-slate-900">
-          Aditi Sharma
-        </h3>
-        <p class="text-xs text-fuchsia-600 font-medium">
-          Program Director
-        </p>
-        <p class="mt-3 text-xs text-slate-600 leading-relaxed">
-          Leads curriculum design, coordinates with schools, and balances fun
-          with strong foundations in every cohort.
-        </p>
-      </article>
-
-      <!-- Card 3 -->
-      <article
-        class="relative rounded-2xl bg-white border border-emerald-100 shadow-sm px-6 pt-10 pb-6 flex flex-col items-center text-center"
-      >
-        <div
-          class="absolute -top-10 h-20 w-20 rounded-full border-4 border-white shadow-md overflow-hidden"
-        >
-          <img
-            src="assets/img/member-card-3.jpg"
-            alt="Team member"
-            class="h-full w-full object-cover"
-          />
-        </div>
-
-        <h3 class="mt-2 text-sm font-semibold text-slate-900">
-          Rahul Kumar
-        </h3>
-        <p class="text-xs text-emerald-600 font-medium">
-          Mentor – Web &amp; Games
-        </p>
-        <p class="mt-3 text-xs text-slate-600 leading-relaxed">
-          Mentors students on HTML, CSS, JavaScript, and game-based projects
-          that turn concepts into interactive experiences.
-        </p>
-      </article>
-
-      <!-- Card 4 -->
-      <article
-        class="relative rounded-2xl bg-white border border-sky-100 shadow-sm px-6 pt-10 pb-6 flex flex-col items-center text-center"
-      >
-        <div
-          class="absolute -top-10 h-20 w-20 rounded-full border-4 border-white shadow-md overflow-hidden"
-        >
-          <img
-            src="assets/img/member-card-4.jpg"
-            alt="Team member"
-            class="h-full w-full object-cover"
-          />
-        </div>
-
-        <h3 class="mt-2 text-sm font-semibold text-slate-900">
-          Mentor Name
-        </h3>
-        <p class="text-xs text-sky-600 font-medium">
-          Mentor – Beginner Cohorts
-        </p>
-        <p class="mt-3 text-xs text-slate-600 leading-relaxed">
-          Guides first-time coders through the basics using games, stories, and
-          pair programming.
-        </p>
-      </article>
-
-      <!-- Card 5 -->
-      <article
-        class="relative rounded-2xl bg-white border border-amber-100 shadow-sm px-6 pt-10 pb-6 flex flex-col items-center text-center"
-      >
-        <div
-          class="absolute -top-10 h-20 w-20 rounded-full border-4 border-white shadow-md overflow-hidden"
-        >
-          <img
-            src="assets/img/member-card-5.jpg"
-            alt="Team member"
-            class="h-full w-full object-cover"
-          />
-        </div>
-
-        <h3 class="mt-2 text-sm font-semibold text-slate-900">
-          Mentor Name
-        </h3>
-        <p class="text-xs text-amber-600 font-medium">
-          Outreach &amp; Partnerships
-        </p>
-        <p class="mt-3 text-xs text-slate-600 leading-relaxed">
-          Builds partnerships with schools, NGOs, and sponsors to open new
-          Coding Clubhouse locations.
-        </p>
-      </article>
-
-      <!-- Card 6 -->
-      <article
-        class="relative rounded-2xl bg-white border border-rose-100 shadow-sm px-6 pt-10 pb-6 flex flex-col items-center text-center"
-      >
-        <div
-          class="absolute -top-10 h-20 w-20 rounded-full border-4 border-white shadow-md overflow-hidden"
-        >
-          <img
-            src="assets/img/member-card-6.jpg"
-            alt="Team member"
-            class="h-full w-full object-cover"
-          />
-        </div>
-
-        <h3 class="mt-2 text-sm font-semibold text-slate-900">
-          Mentor Name
-        </h3>
-        <p class="text-xs text-rose-600 font-medium">
-          Community &amp; Events
-        </p>
-        <p class="mt-3 text-xs text-slate-600 leading-relaxed">
-          Organises demo days, hackathons, and parent sessions to celebrate
-          student work and keep the community connected.
-        </p>
-      </article>
-    </div>
-  </div>
-</section>
-
-
-    <!-- ================= FOOTER ================= -->
-    <footer id="contact" class="bg-slate-900 text-slate-200 py-10">
-      <div class="max-w-6xl mx-auto px-4 space-y-6">
-        <div
-          class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
-        >
-          <div>
-            <p class="text-base font-semibold">Coding Clubhouse</p>
-            <p class="text-xs text-slate-400 mt-1">
-              A community space where kids learn to code, create, and
-              collaborate.
-            </p>
-          </div>
-
-          <div class="flex gap-3 text-xs sm:text-sm">
-            <a
-              href="mailto:hello@codingclubhouse.org"
-              class="hover:text-white"
-              >hello@codingclubhouse.org</a
-            >
-            <span class="hidden sm:inline text-slate-500">•</span>
-            <a href="#top" class="hover:text-white">Back to top</a>
-          </div>
-        </div>
-
-        <div
-          class="flex flex-wrap justify-center gap-4 text-xs text-slate-400 border-t border-slate-700/60 pt-4"
-        >
-          <span>© 2025 Coding Clubhouse</span>
-          <span class="hidden sm:inline">•</span>
-          <a href="#" class="hover:text-white">Code of Conduct</a>
-          <span class="hidden sm:inline">•</span>
-          <a href="#" class="hover:text-white">Privacy</a>
-        </div>
-      </div>
-    </footer>
+    
   </body>
 </html>

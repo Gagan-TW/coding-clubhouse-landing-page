@@ -10,9 +10,7 @@ A high-fidelity, responsive landing page for the fictional **Coding Clubhouse** 
 ### 🖥️ View the Full Project
 The design focuses on high-impact visuals, custom gradients, and pixel-perfect layout implementation.
 
-![Coding Clubhouse Desktop Preview](assets\img\landing-page.png)
-
----
+![Coding Clubhouse Landing Page](./assets/img/landing-page.png)
 
 ## ✨ Key Technical Features
 
